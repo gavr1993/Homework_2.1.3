@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private Button ChooseStartDate;
     private Button ChooseEndDate;
     private CalendarView StartDateCalendar;
-    private CalendarView EndtDateCalendar;
+    private CalendarView EndDateCalendar;
     private Button okBtn;
     private long StartDate;
     private String StartDateTxt;
@@ -39,10 +39,10 @@ public class MainActivity extends AppCompatActivity {
         ChooseStartDate = findViewById(R.id.chooseStartDate);
         ChooseEndDate = findViewById(R.id.chooseEndDate);
         StartDateCalendar = findViewById(R.id.startDateCalendar);
-        EndtDateCalendar = findViewById(R.id.endtDateCalendar);
+        EndDateCalendar = findViewById(R.id.endtDateCalendar);
         okBtn = findViewById(R.id.okBtn);
         StartDateCalendar.setVisibility(View.GONE);
-        EndtDateCalendar.setVisibility(View.GONE);
+        EndDateCalendar.setVisibility(View.GONE);
     }
 
     private void calendarsShow() {
@@ -50,14 +50,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 StartDateCalendar.setVisibility(View.VISIBLE);
-                EndtDateCalendar.setVisibility(View.GONE);
+                EndDateCalendar.setVisibility(View.GONE);
             }
         });
 
         ChooseEndDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                EndtDateCalendar.setVisibility(View.VISIBLE);
+                EndDateCalendar.setVisibility(View.VISIBLE);
                 StartDateCalendar.setVisibility(View.GONE);
             }
         });
@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        EndtDateCalendar.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+        EndDateCalendar.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @SuppressLint("SetTextI18n")
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
